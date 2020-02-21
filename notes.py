@@ -11,7 +11,7 @@ except:
 from pathlib import Path
 
 
-storage_path=os.path.join(Path(__file__).parent.absolute(),'notas.txt')
+storage_path=os.path.join(Path(__file__).parent.absolute(),'notes.txt')
 icon_path=os.path.join(Path(__file__).parent.absolute(),'note.png')
 
 
@@ -46,7 +46,7 @@ if os.path.exists(storage_path):
 
 label.pack(side="bottom", fill="x")
 text.pack(side="top", fill="both", expand=True)
-label.configure(text="Lembre-se de relaxar, procurar ser feliz e ser uma boa pessoa!")
+label.configure(text="Relaxe, mas não ao ponto de esquecer de ser feliz e bondoso!")
 
 def onModification(event):
     content = event.widget.get("1.0", "end-1c")
