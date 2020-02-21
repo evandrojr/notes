@@ -10,10 +10,8 @@ except:
     import tkinter as tk
 from pathlib import Path
 
-
 storage_path=os.path.join(Path(__file__).parent.absolute(),'notes.txt')
 icon_path=os.path.join(Path(__file__).parent.absolute(),'note.png')
-
 
 class CustomText(tk.Text):
     def __init__(self, *args, **kwargs):
@@ -46,7 +44,7 @@ if os.path.exists(storage_path):
 
 label.pack(side="bottom", fill="x")
 text.pack(side="top", fill="both", expand=True)
-label.configure(text="Relaxe e seja feliz, mas não ao ponto de se esquecer de ser uma boa pessoa!")
+label.configure(text="Relaxe e seja feliz, mas nunca ao ponto de se esquecer de ser uma boa pessoa!")
 
 def onModification(event):
     content = event.widget.get("1.0", "end-1c")
@@ -54,7 +52,6 @@ def onModification(event):
     with open(storage_path,'w') as the_file:
         the_file.write(content)
 
-# setStatusBar()
 text.bind("<<TextModified>>", onModification)
 root.call('wm', 'attributes', '.', '-topmost', '1')
 root.mainloop()
