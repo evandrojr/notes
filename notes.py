@@ -35,7 +35,7 @@ class CustomText(tk.Text):
 root = tk.Tk()
 imgicon = tk.PhotoImage(file=icon_path)
 root.tk.call('wm', 'iconphoto', root._w, imgicon)  
-root.title("DG's Notes")
+root.title("Dng's Notes")
 label = tk.Label(root, anchor="w")
 text = CustomText(root, width=40, height=4, font=('Courier',16), fg='white', bg='#002B36', insertbackground='white' )
 
